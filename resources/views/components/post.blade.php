@@ -11,7 +11,7 @@
         <form action="{{route('posts.destroy', $post )}}" method="post">
             @csrf
             @method('DELETE')
-            <button type="submit" class="text-blue-500">Delete</button>
+            <button type="submit" class="text-blue-500">Löschen</button>
         </form>
     @endcan
 
@@ -21,7 +21,7 @@
             @if (!$post->likedBy(auth()->user()))
                 <form action="{{route('posts.likes', $post->id)}}" method="post" class="mr-1">
                     @csrf
-                    <button type="sumit" class="text-blue-500">Like</button>
+                    <button type="submit" class="text-blue-500">Like</button>
                 </form>
             @else
                 <form action="{{route('posts.likes', $post)}}" method="post" class="mr-1">
